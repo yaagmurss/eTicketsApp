@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
@@ -6,8 +7,9 @@ namespace eTickets.Models
     {
         [Key]
         public int Id { get; set; } 
-        public int Logo { get; set; }
-        public int Name { get; set; }
-        public int Description { get; set; }
+        public string Logo { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public List<Movie> Movies { get; set; }
     }
 }
