@@ -1,23 +1,21 @@
 ﻿using eTickets.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace eTickets.Controllers
 {
-    public class ActorsController : Controller
+    public class MoviesController : Controller
     {
         private readonly AppDbContext _context;
-        public ActorsController(AppDbContext context)
+        public MoviesController(AppDbContext context)
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _context.Actors.ToList();
-            return View(data);
+            var allMovies = await _context.Movies.ToListAsync();
+            return View();
         }
-    
     }
 }
