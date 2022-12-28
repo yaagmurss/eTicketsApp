@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Producer>
 
 @{
-    ViewData["Title"] = "List of Producers";
+    ViewData["Title"] = "List of Producer";
 }
 
 <div class="row">
@@ -15,8 +15,8 @@
                     <th>@Html.DisplayNameFor(model => model.Bio)</th>
 
                 </tr>
-            </thead>
             <tbody>
+            </thead>
                 @foreach (var item in Model)
                 {
                     <tr>
@@ -30,10 +30,13 @@
                             @Html.DisplayFor(modelItem => item.Bio)
                         </td>
 
+
                     </tr>
                 }
             </tbody>
+
         </table>
+
     </div>
 </div>
 
